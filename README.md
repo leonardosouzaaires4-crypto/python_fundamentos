@@ -29,7 +29,7 @@ A aplicação permite realizar operações matemáticas básicas e tem como obje
 
 * Python
 
- [Acessar projeto](./calculadora/)
+ [Acessar projeto](https://github.com/leonardosouzaaires4-crypto/python_fundamentos/tree/main/calculadora)
 
 ---
 
