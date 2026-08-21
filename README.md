@@ -41,7 +41,7 @@ Projeto desenvolvido para praticar estruturas condicionais, loops e geração de
 
 * Python
 
- [Acessar projeto](https://github.com/leonardosouzaaires4crypto/python_fundamentos/tree/main/adivinhe%20o%20n%C3%BAmero)
+ [Acessar projeto](https://github.com/leonardosouzaaires4-crypto/python_fundamentos/tree/main/adivinhe%20o%20n%C3%BAmero)
 
 ---
 
