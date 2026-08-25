@@ -67,11 +67,11 @@ Certifique-se de ter o Python 3 instalado.
 
 Clone o repositório:
 
-git clone https://github.com/leonardosouzaaires4-crypto/python-fundamentos.git
+git clone https://github.com/leonardosouzaaires4-crypto/python_fundamentos.git
 
 Acesse a pasta do projeto:
 
-cd python-fundamentos/validador-cpf
+cd python_fundamentos/validador de CPF
 
 Execute o programa:
 
