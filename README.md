@@ -53,7 +53,7 @@ Projeto desenvolvido para praticar manipulação de strings, funções, condiç�
 
 * Python
 
- [Acessar projeto](./validador-cpf/)
+ [Acessar projeto](https://github.com/leonardosouzaaires4-crypto/python_fundamentos/tree/main/validador%20de%20CPF)
 
 ---
 
