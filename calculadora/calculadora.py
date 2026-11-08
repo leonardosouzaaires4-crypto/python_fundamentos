@@ -9,25 +9,23 @@ def index():
 
 @app.route("/calcular", methods=["POST"])
 def calcular():
-
     num1 = float(request.form["num1"])
     num2 = float(request.form["num2"])
     opcao = request.form["operacao"]
 
     if opcao == "soma":
         resultado = num1 + num2
-
     elif opcao == "subtracao":
         resultado = num1 - num2
-
     elif opcao == "multiplicacao":
         resultado = num1 * num2
-
     elif opcao == "divisao":
         if num2 != 0:
             resultado = num1 / num2
         else:
             resultado = "Não é possível dividir por zero."
+    else:
+        resultado = "Operação inválida!"
 
     if isinstance(resultado, (int, float)):
         resultado = f"{resultado:.2f}"
