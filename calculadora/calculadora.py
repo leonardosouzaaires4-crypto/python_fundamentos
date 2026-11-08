@@ -1,35 +1,45 @@
-﻿while True:
-    print("\n===== CALCULADORA =====")
-    print("1 - Soma")
-    print("2 - Subtração")
-    print("3 - Multiplicação")
-    print("4 - Divisão")
-    print("5 - Sair")
+﻿from flask import Flask, render_template, request
 
-    opcao = input("Escolha uma opção: ")
+app = Flask(__name__)
 
-    if opcao == "5":
-        print("Programa encerrado!")
-        break
+@app.route("/")
+def index():
+    return render_template("index.html")
 
-    if opcao in ["1", "2", "3", "4"]:
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
 
-        if opcao == "1":
-            print(f"Resultado: {num1 + num2}")
+@app.route("/calcular", methods=["POST"])
+def calcular():
 
-        elif opcao == "2":
-            print(f"Resultado: {num1 - num2}")
+    num1 = float(request.form["num1"])
+    num2 = float(request.form["num2"])
+    opcao = request.form["operacao"]
 
-        elif opcao == "3":
-            print(f"Resultado: {num1 * num2}")
+    if opcao == "soma":
+        resultado = num1 + num2
 
-        elif opcao == "4":
-            if num2 != 0:
-                print(f"Resultado: {num1 / num2}")
-            else:
-                print("Não é possível dividir por zero.")
+    elif opcao == "subtracao":
+        resultado = num1 - num2
 
-    else:
-        print("Opção inválida!")
+    elif opcao == "multiplicacao":
+        resultado = num1 * num2
+
+    elif opcao == "divisao":
+        if num2 != 0:
+            resultado = num1 / num2
+        else:
+            resultado = "Não é possível dividir por zero."
+
+    if isinstance(resultado, (int, float)):
+        resultado = f"{resultado:.2f}"
+
+    return render_template(
+        "index.html",
+        resultado=resultado,
+        num1=request.form["num1"],
+        num2=request.form["num2"],
+        operacao=opcao
+    )
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
