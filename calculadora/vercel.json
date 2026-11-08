@@ -1,8 +1,8 @@
-﻿{
+{
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "calculadora.py",
       "use": "@vercel/python"
     }
   ],

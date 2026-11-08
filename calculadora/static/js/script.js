@@ -1,4 +1,4 @@
-﻿document.getElementById("btnLimpar").addEventListener("click", function () {
+document.getElementById("btnLimpar").addEventListener("click", function () {
 
     // Limpa os campos do formulário
     document.getElementById("num1").value = "";
